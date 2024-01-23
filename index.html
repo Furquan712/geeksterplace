@@ -23,6 +23,12 @@ body {
     padding: 10px;
 }
 
+.filter {
+  display: flex;
+   flex-direction: column; /* or column, depending on your needs */
+   flex-wrap: wrap;
+   justify-content: center;
+}
 .card-container {
     position: relative;
     width: 300px; /* Adjust the width as needed */
@@ -113,242 +119,280 @@ body {
    flex-wrap: wrap;
    justify-content: center;
 }
+.filter-wrapper{
+  display: flex;
+  justify-content: center;
+}
   </style>
 </head>
 <body>
-  <div class="m-2 max-w-screen-md flex">
-    <div class=" bg-white p-6  ">
-      <h2 class="text-stone-700 text-xl font-bold">Apply filters</h2>
-      <p class="mt-1 text-sm">Use filters to further refine search</p>
-      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <div class="flex flex-col">
-          <label for="status" class="text-stone-600 text-sm font-medium">Year of Graduation</label>
-  
-          <select id="status" class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
-            <option>2023</option>
-            <option>2022</option>
-            <option>2021</option>
-            <option>2020</option>
-            <option>2019</option>
-            <option>2018</option>
-            <option>2017</option>
-            <option>2016</option>
-            <option>>2015</option>
-          </select>
+  <div class="filter-wrapper mx-auto">
+    <div class="m-2 max-w-screen-md flex">
+      <div class="filter">
+        <div class="m-2 max-w-screen-md">
+          <div class=" bg-white p-6  ">
+            <h2 class="text-stone-700 text-xl font-bold">Apply filters</h2>
+            <p class="mt-1 text-sm">Use filters to further refine search</p>
+            <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div class="flex flex-col">
+                <label for="status" class="text-stone-600 text-sm font-medium">Year of Graduation</label>
+        
+                <select id="year" class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                  <option>All</option>
+                  <option>2023</option>
+                  <option>2022</option>
+                  <option>2021</option>
+                  <option>2020</option>
+                  <option>2019</option>
+                  <option>2018</option>
+                  <option>2017</option>
+                  <option>2016</option>
+                  <option>>2015</option>
+                </select>
+              </div>
+              <div class="flex flex-col">
+                <label for="status" class="text-stone-600 text-sm font-medium">Degree</label>
+        
+                <select id="degree" class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                  <option>All</option>
+                  <option>B.Tech(IT)</option>
+                  <option>BCA</option>
+                  <option>B.Tech</option>
+                  <option>Others</option>
+                </select>
+              </div>
+        
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col">
-          <label for="status" class="text-stone-600 text-sm font-medium">Degree</label>
-  
-          <select id="status" class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
-            <option>B.Tech (IT)</option>
-            <option>BCA</option>
-            <option>MCA</option>
-            <option>MS/Msc</option>
-            <option>Non Tech</option>
-          </select>
-        </div>
-  
-        <div class="flex flex-col">
-          <label for="status" class="text-stone-600 text-sm font-medium">Branch</label>
-  
-          <select id="status" class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
-            <option>Information Technology</option>
-            <option>Non Information Technology</option>
-          </select>
-        </div>
+        
+        <!-- component -->
+      <div>
+        
+        <button
+        class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-blue-700 rounded-full"
+      >
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather feather-hard-drive mr-2"
+      >
+      <line x1="22" y1="12" x2="2" y2="12"></line>
+      <path
+        d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+      ></path>
+      <line x1="6" y1="16" x2="6.01" y2="16"></line>
+      <line x1="10" y1="16" x2="10.01" y2="16"></line>
+      </svg>
+        All
+      </button>
+      
+      
+        <button
+          class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-arrow-right mr-2"
+          >
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+         Non IT
+        </button>
+      
+        <button
+          class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-arrow-right mr-2"
+          >
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+          Career Gap
+        </button>
+      
+        <button
+          class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-arrow-right mr-2"
+          >
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+          Non Engineering
+        </button>
+      
+        <button
+          class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-arrow-right mr-2"
+          >
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+          Non IT
+        </button>
       </div>
-  
-      <div class="mt-6 grid w-full grid-cols-2 justify-end space-x-4 md:flex">
-        <button class="active:scale-95 rounded-lg bg-gray-200 px-8 py-2 font-medium text-gray-600 outline-none focus:ring hover:opacity-90">Reset</button>
-        <button class="active:scale-95 rounded-lg bg-blue-600 px-8 py-2 font-medium text-white outline-none focus:ring hover:opacity-90">Search</button>
-      </div>
+       </div>
     </div>
-  </div>
-  
-  <!-- component -->
-<div>
-  
-  <button
-  class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-blue-700 rounded-full"
->
-<svg
-xmlns="http://www.w3.org/2000/svg"
-width="16"
-height="16"
-viewBox="0 0 24 24"
-fill="none"
-stroke="currentColor"
-stroke-width="2"
-stroke-linecap="round"
-stroke-linejoin="round"
-class="feather feather-hard-drive mr-2"
->
-<line x1="22" y1="12" x2="2" y2="12"></line>
-<path
-  d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
-></path>
-<line x1="6" y1="16" x2="6.01" y2="16"></line>
-<line x1="10" y1="16" x2="10.01" y2="16"></line>
-</svg>
-  All
-</button>
-
-
-  <button
-    class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="feather feather-arrow-right mr-2"
-    >
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg>
-   Non IT
-  </button>
-
-  <button
-    class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="feather feather-arrow-right mr-2"
-    >
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg>
-    Career Gap
-  </button>
-
-  <button
-    class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="feather feather-arrow-right mr-2"
-    >
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg>
-    Non Engineering
-  </button>
-
-  <button
-    class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="feather feather-arrow-right mr-2"
-    >
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg>
-    Non IT
-  </button>
 </div>
-
-  <div id="profileContainer"></div>
+  <div id="profileContainer">
+  </div>
   <button class="ml-4 mb-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" id="loadMoreButton">Load More</button>
 
 
-  <script>
-    let displayedCards = 9;  
-    const cardsPerLoad = 3; 
-    
-    function createProfileCard(profile) {
-      return `
-        <div class="card-container">
-          <div class="card-background">
-            <img src="GEEKSTER.png" alt="Background" class="card-bg-image">
+ <!-- ... (your existing HTML code) ... -->
+ 
+
+<script>
+  let displayedCards = 9;
+  const cardsPerLoad = 3;
+  
+  function createProfileCard(profile) {
+    return `
+      <div class="card-container">
+        <div class="card-background">
+          <img src="GEEKSTER.png" alt="Background" class="card-bg-image">
+        </div>
+        <div class="card-content">
+          <div class="profile-picture-container">
+            <img src="img/${profile.profileImage}" alt="${profile.name}" class="profile-picture">
           </div>
-          <div class="card-content">
-            <div class="profile-picture-container">
-              <img src="img/${profile.profileImage}" alt="${profile.name}" class="profile-picture">
-            </div>
-            <div class="furquan">
-              <h2 class="name">${profile.name}</h2>
-              <p class="title">${profile.title}</p>
-            </div>
-            <div class="company-logo-container">
-              <img src="logo/${profile.companyLogo}_logo.png" alt="Company Logo" class="company-logo">
-            </div>
+          <div class="furquan">
+            <h2 class="name">${profile.name}</h2>
+            <p class="title">${profile.title}</p>
+          </div>
+          <div class="company-logo-container">
+            <img src="logo/${profile.companyLogo}_logo.png" alt="Company Logo" class="company-logo">
           </div>
         </div>
-      `;
+      </div>
+    `;
+  }
+  
+  async function fetchProfiles() {
+    try {
+      const response = await fetch('data2.json');
+      const profiles = await response.json();
+      return profiles;
+    } catch (error) {
+      console.error('Error fetching profiles:', error);
+      return [];
     }
-     
-    async function fetchProfiles() {
-      try {
-        const response = await fetch('data1.json');
-        const profiles = await response.json();
-        return profiles;
-      } catch (error) {
-        console.error('Error fetching profiles:', error);
-        return [];
-      }
-    }
-    
-    function showMoreCards(profileContainer, profiles) {
-      const remainingProfiles = profiles.slice(displayedCards, displayedCards + cardsPerLoad);
-      displayedCards += cardsPerLoad;
-    
+  }
+  
+  function filterProfiles(profiles, selectedYear, selectedDegree) {
+    return profiles.filter(profile => {
+      return (
+        (selectedYear === 'All' || profile.year == selectedYear) &&
+        (selectedDegree === 'All' || profile.degree === selectedDegree)
+      );
+    });
+  }
+  
+  function showMoreCards(profileContainer, profiles) {
+    const remainingProfiles = profiles.slice(displayedCards, displayedCards + cardsPerLoad);
+    displayedCards += cardsPerLoad;
+  
+    if (remainingProfiles.length > 0) {
       profileContainer.innerHTML += remainingProfiles.map(createProfileCard).join("");
-      
-      const loadMoreButton = document.getElementById("loadMoreButton");
-      if (displayedCards >= profiles.length) {
-        loadMoreButton.style.display = "none";
-      }
     }
-    
-    async function addProfilesToContainer() {
-      const profileContainer = document.getElementById("profileContainer");
-      const loadMoreButton = document.getElementById("loadMoreButton");
-    
-      const profiles = await fetchProfiles();
-     
-      showMoreCards(profileContainer, profiles);
-      showMoreCards(profileContainer, profiles);
-      showMoreCards(profileContainer, profiles);
-     
-      loadMoreButton.addEventListener("click", () => {
-        showMoreCards(profileContainer, profiles);
-      });
+  
+    const loadMoreButton = document.getElementById("loadMoreButton");
+    if (displayedCards >= profiles.length) {
+      loadMoreButton.style.display = "none";
+    } else {
+      loadMoreButton.style.display = "block";
     }
-    
-    addProfilesToContainer();
-      </script>
+  }
+  
+  async function addProfilesToContainer() {
+    const profileContainer = document.getElementById("profileContainer");
+    const loadMoreButton = document.getElementById("loadMoreButton");
+    const yearSelect = document.getElementById('year');
+    const degreeSelect = document.getElementById('degree');
+  
+    const profiles = await fetchProfiles();
+    let filteredProfiles = profiles;
+  
+    // Event listeners for filter change
+    yearSelect.addEventListener('change', function() {
+      const selectedYear = this.value;
+      const selectedDegree = degreeSelect.value;
+      filteredProfiles = filterProfiles(profiles, selectedYear, selectedDegree);
+      profileContainer.innerHTML = ''; // Clear existing cards
+      displayedCards = 0;
+      showMoreCards(profileContainer, filteredProfiles);
+    });
+  
+    degreeSelect.addEventListener('change', function() {
+      const selectedDegree = this.value;
+      const selectedYear = yearSelect.value;
+      filteredProfiles = filterProfiles(profiles, selectedYear, selectedDegree);
+      profileContainer.innerHTML = ''; // Clear existing cards
+      displayedCards = 0;
+      showMoreCards(profileContainer, filteredProfiles);
+    });
+  
+    showMoreCards(profileContainer, filteredProfiles);
+    showMoreCards(profileContainer, filteredProfiles);
+    showMoreCards(profileContainer, filteredProfiles);
+  
+    loadMoreButton.addEventListener("click", () => {
+      showMoreCards(profileContainer, filteredProfiles);
+    });
+  }
+  
+  addProfilesToContainer();
+  </script>
+  
+  <!-- ... (your existing HTML code) ... -->
   
 </body>
 </html>
