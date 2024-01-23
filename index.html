@@ -10,7 +10,7 @@
     
 
 body {
-    background-color: white;
+    background-color: #f4f8fb;
     font-family: 'Arial', sans-serif;
 }
 
@@ -127,26 +127,138 @@ body {
   display: flex;
     justify-content: center
 }
-.header {
-  display: flex;
-}
+ 
 .filterComponent {
-    background-image: url('./bg.png');
+    /* background-image: url('./bg.png'); */
+
     background-size: cover; /* or 'contain' based on your preference */
     background-position: center center; /* or adjust as needed */
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value (last parameter) as needed */
+    background-color:#f4f8fb; /* Adjust the alpha value (last parameter) as needed */
+  }
+  .hero {
+    padding: 150px;
   }
   </style>
 </head>
 <body>
 
   <div class="header">
-  <div class="filter-wrapper mx-auto">
+    
+
+    <nav class="bg-w dark:bg-gray-900 bg-opacity-70 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="https://geekster.in/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="https://www.geekster.in/Logo.svg" class="h-8" alt="Flowbite Logo">
+  </a>
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <li>
+        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+      </li>
+      <li>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"></a>
+      </li>
+      <li>
+        <a href="https://www.geekster.in/full-stack-web-development-program" target="_blank" rel="noopener noreferrer" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Course</a>
+      </li>
+      <li>
+        <a href="https://www.geekster.in/masterclass" target="_blank" rel="noopener noreferrer" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Youtube Reviews</a>
+      </li>
+      <li>
+        <a href="https://www.geekster.in/masterclass" target="_blank" rel="noopener noreferrer" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">LinkedIn reviews</a>
+      </li>
+      <li>
+        <a href="https://www.geekster.in/masterclass" target="_blank" rel="noopener noreferrer" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Media</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class=" pt-24 [85rem] mx-auto px-4 sm:px-6 lg:px-8" style=" padding-top: 150px; padding-right: 150px; padding-left: 150px;">
+  <!-- Grid -->
+  <div class="grid justify-items-end lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
+    <div class="lg:col-span-3">
+      <h1 class="block text-3xl font-bold text-black-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-dark">India's Finest Industry-Driven Programs</h1>
+      <p class="mt-3 text-lg text-gray-800 dark:text-gray-400">Just as every masterpiece starts with a blank canvas, every success story begins with education..</p>
+
+      <div class="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+        <a class="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+          Explore Now
+        </a>
+      </div>
+      <!-- End Brands -->
+    </div>
+    <!-- End Col -->
+
+    <div class="lg:col-span-4 mt-10 lg:mt-0">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/pBMWcEh-0D8?si=t4dx-u1pw2gzbuAK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <!-- End Col -->
+  </div>
+  <!-- End Grid -->
+ 
+  <!-- ====== Brands Section Start -->
+<section class=" py-20 dark:bg-dark lg:py-[120px]">
+  <div class="container mx-auto">
+     <div class="flex flex-wrap -mx-4">
+        <div class="w-full px-4">
+           <div class="flex flex-wrap items-center justify-center">
+              <a
+                 href="javascript:void(0)"
+                 class="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
+                 >
+              <img
+                 src="https://www.geekster.in/icons/nsdc.png"
+                 alt="image"
+                 class="w-full h-18"
+                 />
+              </a>
+              <a
+                 href="javascript:void(0)"
+                 class="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
+                 >
+              <img
+                 src="https://cdn.gkstr.in/images/mca_logo.png"
+                 alt="image"
+                 class="w-full h-18"
+                 />
+              </a>
+              <a
+                 href="javascript:void(0)"
+                 class="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
+                 >
+              <img
+                 src="https://cdn.gkstr.in/images/startup_india_logo.png"
+                 alt="image"
+                 class="w-full h-18"
+                 />
+              </a>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>
+<!-- ====== Brands Section End -->
+</div>
+<!-- End Hero -->
+
+  <div class="filter-wrapper pt-4 mx-auto">
     <div class="m-2 max-w-screen-md flex">
       <div class="filter">
         <div class="filterComponent m-2 max-w-screen-md">
-          <div class="bg-white p-6">
+          <div class=" p-6">
             <h2 class="text-stone-700 text-xl font-bold">Apply filters</h2>
             <p class="mt-1 text-sm">Use filters to further refine search</p>
             <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -301,8 +413,11 @@ body {
   </div>
   <div id="profileContainer">
   </div>
-  <button class="ml-4 mb-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" id="loadMoreButton">Load More</button>
-
+  <div style="display: flex; justify-content: center;">
+    <button class="ml-4 mb-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-6 py-2 bg-green-200 text-green-700 rounded-full" id="loadMoreButton">Load More</button>
+  </div>
+  
+  
 
  <!-- ... (your existing HTML code) ... -->
  
